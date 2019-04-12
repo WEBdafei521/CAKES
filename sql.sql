@@ -19,9 +19,9 @@ create table banner(
     http_url varchar(128),
     img_url varchar(128)
 );
-insert into banner values(null,1,"/details.html?lid=1","http://127.0.0.1:3000/img/2eb5adabe75b62a89a15cfeb16b3364a(1).jpg");
-insert into banner values(null,2,"/details.html?lid=2","http://127.0.0.1:3000/img/89902fbb678d9c2fad4f22cc4c36deb6.jpg");
-insert into banner values(null,3,"/details.html?lid=3","http://127.0.0.1:3000/img/banner11.jpg");
+insert into banner values(null,1,"/details.html?lid=1","img/2eb5adabe75b62a89a15cfeb16b3364a(1).jpg");
+insert into banner values(null,2,"/details.html?lid=2","img/89902fbb678d9c2fad4f22cc4c36deb6.jpg");
+insert into banner values(null,3,"/details.html?lid=3","img/banner11.jpg");
 /*首页商品*/
 /*新品*/
 create table details_new(
@@ -33,10 +33,10 @@ create table details_new(
     href varchar(128),
     price varchar(128)
 );
-insert into details_new values(null,4,"草莓奶油蛋糕","甜润奶油，与草莓的自然甜度搭配","http://127.0.0.1:3000/img/new_1.png","/details.html?lid=4","198");
-insert into details_new values(null,5,"黑森林","樱桃酒味，从巧克力卷的缝隙飘出","http://127.0.0.1:3000/img/new_2.png","/details.html?lid=5","298");
-insert into details_new values(null,6,"栗蓉暗香","栗泥毛线球，点缀比利时黑巧克力豆","http://127.0.0.1:3000/img/new_3.png","/details.html?lid=6","198");
-insert into details_new values(null,7,'小重组','均一,轻褐的千层酥,三种“重组可能','http://127.0.0.1:3000/img/new_4.png','/details.html?lid=7','198');
+insert into details_new values(null,4,"草莓奶油蛋糕","甜润奶油，与草莓的自然甜度搭配","img/new_1.png","/details.html?lid=4","198");
+insert into details_new values(null,5,"黑森林","樱桃酒味，从巧克力卷的缝隙飘出","img/new_2.png","/details.html?lid=5","298");
+insert into details_new values(null,6,"栗蓉暗香","栗泥毛线球，点缀比利时黑巧克力豆","img/new_3.png","/details.html?lid=6","198");
+insert into details_new values(null,7,'小重组','均一,轻褐的千层酥,三种“重组可能','img/new_4.png','/details.html?lid=7','198');
 /*儿童*/
 create table details_child(
     id int primary key auto_increment,
@@ -47,10 +47,10 @@ create table details_child(
     href varchar(128),
     price varchar(128)
 );
-insert into details_child values(null,15,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/child_1.png","/details.html?lid=15","198");
-insert into details_child values(null,16,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/child_2.png","/details.html?lid=16","298");
-insert into details_child values(null,17,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/child_3.png","/details.html?lid=17","98");
-insert into details_child values(null,18,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/child_4.png","/details.html?lid=18","198");
+insert into details_child values(null,15,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/child_1.png","/details.html?lid=15","198");
+insert into details_child values(null,16,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/child_2.png","/details.html?lid=16","298");
+insert into details_child values(null,17,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/child_3.png","/details.html?lid=17","98");
+insert into details_child values(null,18,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/child_4.png","/details.html?lid=18","198");
 /*聚会*/
 create table details_part(
     id int primary key auto_increment,
@@ -61,10 +61,10 @@ create table details_part(
     href varchar(128),
     price varchar(128)
 );
-insert into details_part values(null,26,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/part_1.png","/details.html?lid=26","198");
-insert into details_part values(null,27,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/part_2.png","/details.html?lid=27","198");
-insert into details_part values(null,28,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/part_3.png","/details.html?lid=28","198");
-insert into details_part values(null,29,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/part_4.png","/details.html?lid=29","198");
+insert into details_part values(null,26,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/part_1.png","/details.html?lid=26","198");
+insert into details_part values(null,27,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/part_2.png","/details.html?lid=27","198");
+insert into details_part values(null,28,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/part_3.png","/details.html?lid=28","198");
+insert into details_part values(null,29,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/part_4.png","/details.html?lid=29","198");
 
 /*生日*/
 create table details_birth(
@@ -76,10 +76,10 @@ create table details_birth(
     href varchar(128),
     price varchar(128)
 );
-insert into details_birth values(null,37,"黑白巧克力慕斯 彼尔德（Party）","'孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/floor1_1.png","/details.html?lid=37","198");
-insert into details_birth values(null,38,"黑白巧克力慕斯 彼尔德（Party）","'孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/floor1_2.png","/details.html?lid=38","198");
-insert into details_birth values(null,39,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/floor1_3.png","/details.html?lid=39","198");
-insert into details_birth values(null,40,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","http://127.0.0.1:3000/img/floor1_4.png","/details.html?lid=40","198");
+insert into details_birth values(null,37,"黑白巧克力慕斯 彼尔德（Party）","'孩子的世界，简单到非黑即白。'","img/floor1_1.png","/details.html?lid=37","198");
+insert into details_birth values(null,38,"黑白巧克力慕斯 彼尔德（Party）","'孩子的世界，简单到非黑即白。'","img/floor1_2.png","/details.html?lid=38","198");
+insert into details_birth values(null,39,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/floor1_3.png","/details.html?lid=39","198");
+insert into details_birth values(null,40,"黑白巧克力慕斯 彼尔德（Party）","' 孩子的世界，简单到非黑即白。'","img/floor1_4.png","/details.html?lid=40","198");
 
 /*文章*/
 create table details_txt(
@@ -92,14 +92,14 @@ create table details_txt(
     txt_url varchar(128)
     
 );
-insert into details_txt values(null,1,"2018.11.23","21客志","冬季刊·进博会","http://127.0.0.1:3000/img/txt_1.jpg","/txt_details.html?tid=1");
-insert into details_txt values(null,2,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_2.jpg","/txt_details.html?tid=2");
-insert into details_txt values(null,3,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_3.jpg","/txt_details.html?tid=3");
-insert into details_txt values(null,4,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_4.jpg","/txt_details.html?tid=4");
-insert into details_txt values(null,5,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_5.jpg","/txt_details.html?tid=5");
-insert into details_txt values(null,6,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_6.jpg","/txt_details.html?tid=6");
-insert into details_txt values(null,7,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_7.jpg","/txt_details.html?tid=7");
-insert into details_txt values(null,8,"2018.11.23","21客志","廿一志秋刊·客服Q&A","http://127.0.0.1:3000/img/txt_8.jpg","/txt_details.html?tid=8");
+insert into details_txt values(null,1,"2018.11.23","21客志","冬季刊·进博会","img/txt_1.jpg","/txt_details.html?tid=1");
+insert into details_txt values(null,2,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_2.jpg","/txt_details.html?tid=2");
+insert into details_txt values(null,3,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_3.jpg","/txt_details.html?tid=3");
+insert into details_txt values(null,4,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_4.jpg","/txt_details.html?tid=4");
+insert into details_txt values(null,5,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_5.jpg","/txt_details.html?tid=5");
+insert into details_txt values(null,6,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_6.jpg","/txt_details.html?tid=6");
+insert into details_txt values(null,7,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_7.jpg","/txt_details.html?tid=7");
+insert into details_txt values(null,8,"2018.11.23","21客志","廿一志秋刊·客服Q&A","img/txt_8.jpg","/txt_details.html?tid=8");
 
 /*文章详情*/
 create table txt_content(
@@ -118,13 +118,13 @@ create table txt_content(
     pic9 varchar(128),
     pic10 varchar(128)
 );
-insert into txt_content values(null,1,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt1_1.jpg","http://127.0.0.1:3000/img/txt1_2.jpg","http://127.0.0.1:3000/img/txt1_3.jpg","http://127.0.0.1:3000/img/txt1_4.jpg","http://127.0.0.1:3000/img/txt1_5.jpg","http://127.0.0.1:3000/img/txt1_6.jpg","http://127.0.0.1:3000/img/txt1_7.jpg","http://127.0.0.1:3000/img/txt1_8.jpg","http://127.0.0.1:3000/img/txt1_9.jpg","http://127.0.0.1:3000/img/txt10_10.jpg");
-insert into txt_content values(null,2,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt2_1.jpg","http://127.0.0.1:3000/img/txt2_2.jpg","http://127.0.0.1:3000/img/txt2_3.jpg","http://127.0.0.1:3000/img/txt2_4.jpg","http://127.0.0.1:3000/img/txt2_5.jpg","http://127.0.0.1:3000/img/txt2_6.jpg","http://127.0.0.1:3000/img/txt2_7.jpg","http://127.0.0.1:3000/img/txt2_8.jpg","http://127.0.0.1:3000/img/txt2_9.jpg","http://127.0.0.1:3000/img/txt11_10.jpg");
-insert into txt_content values(null,3,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt3_1.jpg","http://127.0.0.1:3000/img/txt3_2.jpg","http://127.0.0.1:3000/img/txt3_3.jpg","http://127.0.0.1:3000/img/txt3_4.jpg","http://127.0.0.1:3000/img/txt3_5.jpg","http://127.0.0.1:3000/img/txt3_6.jpg","http://127.0.0.1:3000/img/txt3_7.jpg","http://127.0.0.1:3000/img/txt3_8.jpg","http://127.0.0.1:3000/img/txt3_9.jpg","http://127.0.0.1:3000/img/txt12_10.jpg");
-insert into txt_content values(null,4,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt4_1.jpg","http://127.0.0.1:3000/img/txt4_2.jpg","http://127.0.0.1:3000/img/txt4_3.jpg","http://127.0.0.1:3000/img/txt4_4.jpg","http://127.0.0.1:3000/img/txt4_5.jpg","http://127.0.0.1:3000/img/txt4_6.jpg","http://127.0.0.1:3000/img/txt4_7.jpg","http://127.0.0.1:3000/img/txt4_8.jpg","http://127.0.0.1:3000/img/txt4_9.jpg","http://127.0.0.1:3000/img/txt13_10.jpg");
-insert into txt_content values(null,5,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt5_1.jpg","http://127.0.0.1:3000/img/txt5_2.jpg","http://127.0.0.1:3000/img/txt5_3.jpg","http://127.0.0.1:3000/img/txt5_4.jpg","http://127.0.0.1:3000/img/txt5_5.jpg","http://127.0.0.1:3000/img/txt5_6.jpg","http://127.0.0.1:3000/img/txt5_7.jpg","http://127.0.0.1:3000/img/txt5_8.jpg","http://127.0.0.1:3000/img/txt5_9.jpg","http://127.0.0.1:3000/img/txt14_10.jpg");
-insert into txt_content values(null,6,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt6_1.jpg","http://127.0.0.1:3000/img/txt6_2.jpg","http://127.0.0.1:3000/img/txt6_3.jpg","http://127.0.0.1:3000/img/txt6_4.jpg","http://127.0.0.1:3000/img/txt6_5.jpg","http://127.0.0.1:3000/img/txt6_6.jpg","http://127.0.0.1:3000/img/txt6_7.jpg","http://127.0.0.1:3000/img/txt6_8.jpg","http://127.0.0.1:3000/img/txt6_9.jpg","http://127.0.0.1:3000/img/txt15_10.jpg");
-insert into txt_content values(null,7,"冬季刊·进博会","2018.11.23","http://127.0.0.1:3000/img/txt7_1.jpg","http://127.0.0.1:3000/img/txt7_2.jpg","http://127.0.0.1:3000/img/txt7_3.jpg","http://127.0.0.1:3000/img/txt7_4.jpg","http://127.0.0.1:3000/img/txt7_5.jpg","http://127.0.0.1:3000/img/txt7_6.jpg","http://127.0.0.1:3000/img/txt7_7.jpg","http://127.0.0.1:3000/img/txt7_8.jpg","http://127.0.0.1:3000/img/txt7_9.jpg","http://127.0.0.1:3000/img/txt16_10.jpg");
+insert into txt_content values(null,1,"冬季刊·进博会","2018.11.23","img/txt1_1.jpg","img/txt1_2.jpg","img/txt1_3.jpg","img/txt1_4.jpg","img/txt1_5.jpg","img/txt1_6.jpg","img/txt1_7.jpg","img/txt1_8.jpg","img/txt1_9.jpg","img/txt10_10.jpg");
+insert into txt_content values(null,2,"冬季刊·进博会","2018.11.23","img/txt2_1.jpg","img/txt2_2.jpg","img/txt2_3.jpg","img/txt2_4.jpg","img/txt2_5.jpg","img/txt2_6.jpg","img/txt2_7.jpg","img/txt2_8.jpg","img/txt2_9.jpg","img/txt11_10.jpg");
+insert into txt_content values(null,3,"冬季刊·进博会","2018.11.23","img/txt3_1.jpg","img/txt3_2.jpg","img/txt3_3.jpg","img/txt3_4.jpg","img/txt3_5.jpg","img/txt3_6.jpg","img/txt3_7.jpg","img/txt3_8.jpg","img/txt3_9.jpg","img/txt12_10.jpg");
+insert into txt_content values(null,4,"冬季刊·进博会","2018.11.23","img/txt4_1.jpg","img/txt4_2.jpg","img/txt4_3.jpg","img/txt4_4.jpg","img/txt4_5.jpg","img/txt4_6.jpg","img/txt4_7.jpg","img/txt4_8.jpg","img/txt4_9.jpg","img/txt13_10.jpg");
+insert into txt_content values(null,5,"冬季刊·进博会","2018.11.23","img/txt5_1.jpg","img/txt5_2.jpg","img/txt5_3.jpg","img/txt5_4.jpg","img/txt5_5.jpg","img/txt5_6.jpg","img/txt5_7.jpg","img/txt5_8.jpg","img/txt5_9.jpg","img/txt14_10.jpg");
+insert into txt_content values(null,6,"冬季刊·进博会","2018.11.23","img/txt6_1.jpg","img/txt6_2.jpg","img/txt6_3.jpg","img/txt6_4.jpg","img/txt6_5.jpg","img/txt6_6.jpg","img/txt6_7.jpg","img/txt6_8.jpg","img/txt6_9.jpg","img/txt15_10.jpg");
+insert into txt_content values(null,7,"冬季刊·进博会","2018.11.23","img/txt7_1.jpg","img/txt7_2.jpg","img/txt7_3.jpg","img/txt7_4.jpg","img/txt7_5.jpg","img/txt7_6.jpg","img/txt7_7.jpg","img/txt7_8.jpg","img/txt7_9.jpg","img/txt16_10.jpg");
 /*新品列表*/
 create table new_list(
     id int primary key auto_increment,
@@ -134,17 +134,17 @@ create table new_list(
     href varchar(128),
     price varchar(128)
 );
-insert into new_list values(null,4,"草莓奶油蛋糕","http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_1.png","/details.html?lid=4","198");
-insert into new_list values(null,5,"黑森林","http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_2.png","/details.html?lid=5","298");
-insert into new_list values(null,6,"栗蓉暗香","http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_3.png","/deta.htmlils?lid=6","198");
-insert into new_list values(null,7,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_4.png','/details.html?lid=7','198');
-insert into new_list values(null,8,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_5.png','/details.html?lid=8','198');
-insert into new_list values(null,9,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_5.png','/details.html?lid=9','198');
-insert into new_list values(null,10,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_6.png','/details.html?lid=10','198');
-insert into new_list values(null,11,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_7.png','/details.html?lid=11','198');
-insert into new_list values(null,12,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_8.png','/details.html?lid=12','198');
-insert into new_list values(null,13,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_9.png','/details.html?lid=13','198');
-insert into new_list values(null,14,'小重组','http://127.0.0.1:3000/http://127.0.0.1:3000/img/new_10.png','/details.html?lid=14','198');
+insert into new_list values(null,4,"草莓奶油蛋糕","img/new_1.png","/details.html?lid=4","198");
+insert into new_list values(null,5,"黑森林","img/new_2.png","/details.html?lid=5","298");
+insert into new_list values(null,6,"栗蓉暗香","img/new_3.png","/deta.htmlils?lid=6","198");
+insert into new_list values(null,7,'小重组','img/new_4.png','/details.html?lid=7','198');
+insert into new_list values(null,8,'小重组','img/new_5.png','/details.html?lid=8','198');
+insert into new_list values(null,9,'小重组','img/new_5.png','/details.html?lid=9','198');
+insert into new_list values(null,10,'小重组','img/new_6.png','/details.html?lid=10','198');
+insert into new_list values(null,11,'小重组','img/new_7.png','/details.html?lid=11','198');
+insert into new_list values(null,12,'小重组','img/new_8.png','/details.html?lid=12','198');
+insert into new_list values(null,13,'小重组','img/new_9.png','/details.html?lid=13','198');
+insert into new_list values(null,14,'小重组','img/new_10.png','/details.html?lid=14','198');
 
 /*儿童列表*/
 create table child_list(
@@ -155,17 +155,17 @@ create table child_list(
     href varchar(128),
     price varchar(128)
 );
-insert into child_list values(null,15,"草莓奶油蛋糕","http://127.0.0.1:3000/img/new_1.png","/details.html?lid=15","198");
-insert into child_list values(null,16,"黑森林","http://127.0.0.1:3000/img/new_2.png","/details.html?lid=16","298");
-insert into child_list values(null,17,"栗蓉暗香","http://127.0.0.1:3000/img/new_3.png","/deta.htmlils?lid=17","198");
-insert into child_list values(null,18,'小重组','http://127.0.0.1:3000/img/new_4.png','/details.html?lid=18','198');
-insert into child_list values(null,19,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=19','198');
-insert into child_list values(null,20,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=20','198');
-insert into child_list values(null,21,'小重组','http://127.0.0.1:3000/img/new_6.png','/details.html?lid=21','198');
-insert into child_list values(null,22,'小重组','http://127.0.0.1:3000/img/new_7.png','/details.html?lid=22','198');
-insert into child_list values(null,23,'小重组','http://127.0.0.1:3000/img/new_8.png','/details.html?lid=23','198');
-insert into child_list values(null,24,'小重组','http://127.0.0.1:3000/img/new_9.png','/details.html?lid=24','198');
-insert into child_list values(null,25,'小重组','http://127.0.0.1:3000/img/new_10.png','/details.html?lid=25','198');
+insert into child_list values(null,15,"草莓奶油蛋糕","img/new_1.png","/details.html?lid=15","198");
+insert into child_list values(null,16,"黑森林","img/new_2.png","/details.html?lid=16","298");
+insert into child_list values(null,17,"栗蓉暗香","img/new_3.png","/deta.htmlils?lid=17","198");
+insert into child_list values(null,18,'小重组','img/new_4.png','/details.html?lid=18','198');
+insert into child_list values(null,19,'小重组','img/new_5.png','/details.html?lid=19','198');
+insert into child_list values(null,20,'小重组','img/new_5.png','/details.html?lid=20','198');
+insert into child_list values(null,21,'小重组','img/new_6.png','/details.html?lid=21','198');
+insert into child_list values(null,22,'小重组','img/new_7.png','/details.html?lid=22','198');
+insert into child_list values(null,23,'小重组','img/new_8.png','/details.html?lid=23','198');
+insert into child_list values(null,24,'小重组','img/new_9.png','/details.html?lid=24','198');
+insert into child_list values(null,25,'小重组','img/new_10.png','/details.html?lid=25','198');
 /*聚会列表*/
 create table part_list(
     id int primary key auto_increment,
@@ -175,17 +175,17 @@ create table part_list(
     href varchar(128),
     price varchar(128)
 );
-insert into part_list values(null,26,"草莓奶油蛋糕","http://127.0.0.1:3000/img/new_1.png","/details.html?lid=26","198");
-insert into part_list values(null,27,"黑森林","http://127.0.0.1:3000/img/new_2.png","/details.html?lid=27","298");
-insert into part_list values(null,28,"栗蓉暗香","http://127.0.0.1:3000/img/new_3.png","/deta.htmlils?lid=28","198");
-insert into part_list values(null,29,'小重组','http://127.0.0.1:3000/img/new_4.png','/details.html?lid=29','198');
-insert into part_list values(null,30,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=30','198');
-insert into part_list values(null,31,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=31','198');
-insert into part_list values(null,32,'小重组','http://127.0.0.1:3000/img/new_6.png','/details.html?lid=32','198');
-insert into part_list values(null,33,'小重组','http://127.0.0.1:3000/img/new_7.png','/details.html?lid=33','198');
-insert into part_list values(null,34,'小重组','http://127.0.0.1:3000/img/new_8.png','/details.html?lid=34','198');
-insert into part_list values(null,35,'小重组','http://127.0.0.1:3000/img/new_9.png','/details.html?lid=35','198');
-insert into part_list values(null,36,'小重组','http://127.0.0.1:3000/img/new_10.png','/details.html?lid=36','198');
+insert into part_list values(null,26,"草莓奶油蛋糕","img/new_1.png","/details.html?lid=26","198");
+insert into part_list values(null,27,"黑森林","img/new_2.png","/details.html?lid=27","298");
+insert into part_list values(null,28,"栗蓉暗香","img/new_3.png","/deta.htmlils?lid=28","198");
+insert into part_list values(null,29,'小重组','img/new_4.png','/details.html?lid=29','198');
+insert into part_list values(null,30,'小重组','img/new_5.png','/details.html?lid=30','198');
+insert into part_list values(null,31,'小重组','img/new_5.png','/details.html?lid=31','198');
+insert into part_list values(null,32,'小重组','img/new_6.png','/details.html?lid=32','198');
+insert into part_list values(null,33,'小重组','img/new_7.png','/details.html?lid=33','198');
+insert into part_list values(null,34,'小重组','img/new_8.png','/details.html?lid=34','198');
+insert into part_list values(null,35,'小重组','img/new_9.png','/details.html?lid=35','198');
+insert into part_list values(null,36,'小重组','img/new_10.png','/details.html?lid=36','198');
 
 /*生日列表*/
 create table birth_list(
@@ -196,17 +196,17 @@ create table birth_list(
     href varchar(128),
     price varchar(128)
 );
-insert into birth_list values(null,37,"草莓奶油蛋糕","http://127.0.0.1:3000/img/new_1.png","/details.html?lid=37","198");
-insert into birth_list values(null,38,"黑森林","http://127.0.0.1:3000/img/new_2.png","/details.html?lid=38","298");
-insert into birth_list values(null,39,"栗蓉暗香","http://127.0.0.1:3000/img/new_3.png","/deta.htmlils?lid=39","198");
-insert into birth_list values(null,40,'小重组','http://127.0.0.1:3000/img/new_4.png','/details.html?lid=40','198');
-insert into birth_list values(null,41,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=41','198');
-insert into birth_list values(null,42,'小重组','http://127.0.0.1:3000/img/new_5.png','/details.html?lid=42','198');
-insert into birth_list values(null,43,'小重组','http://127.0.0.1:3000/img/new_6.png','/details.html?lid=43','198');
-insert into birth_list values(null,44,'小重组','http://127.0.0.1:3000/img/new_7.png','/details.html?lid=44','198');
-insert into birth_list values(null,45,'小重组','http://127.0.0.1:3000/img/new_8.png','/details.html?lid=45','198');
-insert into birth_list values(null,46,'小重组','http://127.0.0.1:3000/img/new_9.png','/details.html?lid=46','198');
-insert into birth_list values(null,47,'小重组','http://127.0.0.1:3000/img/new_10.png','/details.html?lid=47','198');
+insert into birth_list values(null,37,"草莓奶油蛋糕","img/new_1.png","/details.html?lid=37","198");
+insert into birth_list values(null,38,"黑森林","img/new_2.png","/details.html?lid=38","298");
+insert into birth_list values(null,39,"栗蓉暗香","img/new_3.png","/deta.htmlils?lid=39","198");
+insert into birth_list values(null,40,'小重组','img/new_4.png','/details.html?lid=40','198');
+insert into birth_list values(null,41,'小重组','img/new_5.png','/details.html?lid=41','198');
+insert into birth_list values(null,42,'小重组','img/new_5.png','/details.html?lid=42','198');
+insert into birth_list values(null,43,'小重组','img/new_6.png','/details.html?lid=43','198');
+insert into birth_list values(null,44,'小重组','img/new_7.png','/details.html?lid=44','198');
+insert into birth_list values(null,45,'小重组','img/new_8.png','/details.html?lid=45','198');
+insert into birth_list values(null,46,'小重组','img/new_9.png','/details.html?lid=46','198');
+insert into birth_list values(null,47,'小重组','img/new_10.png','/details.html?lid=47','198');
 
 
 

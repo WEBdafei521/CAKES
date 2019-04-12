@@ -9,7 +9,7 @@
       var html="";
       var list=[];
       $.ajax({
-          url:"http://127.0.0.1:3000/content/txt_list?",
+          url:"content/txt_list?",
           type:"get",
           data:{},
           dataType:"json",
@@ -41,7 +41,7 @@
       $(".add-more>a").click(function(){
         pno+=1;
         $.ajax({
-            url:"http://127.0.0.1:3000/content/txt_list?pno="+pno,
+            url:"content/txt_list?pno="+pno,
             type:"get",
             data:{},
             dataType:"json",

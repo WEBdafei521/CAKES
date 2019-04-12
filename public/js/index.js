@@ -1,7 +1,7 @@
 $(function(){
     // 轮播图信息
        $.ajax({
-        url:"http://127.0.0.1:3000/content/index_banner",
+        url:"content/index_banner",
         type:"get",
         data:{},
         dataType:"json",
@@ -21,7 +21,7 @@ $(function(){
        });
     // 首页新品
        $.ajax({
-        url:"http://127.0.0.1:3000/content/index_new",
+        url:"content/index_new",
         type:"get",
         data:{},
         dataType:"json",
@@ -117,7 +117,7 @@ $(function(){
                 var pname=$(this).parent().parent().parent().find(".floor_details>p.pname").html();
                 var pweight=$(this).parent().parent().parent().find(".active").html().slice(0,1);
                $.ajax({
-                   url:"http://127.0.0.1:3000/content/addcart",
+                   url:"content/addcart",
                    type:"get",
                    data:{uid,pid,price,pname,pweight},
                    dataType:"json",
@@ -136,7 +136,7 @@ $(function(){
        });
     // 儿童专区
        $.ajax({
-        url:"http://127.0.0.1:3000/content/index_child",
+        url:"content/index_child",
         type:"get",
         data:{},
         dataType:"json",
@@ -235,7 +235,7 @@ $(function(){
                     var pname=$(this).parent().parent().parent().find(".floor_details>p.pname").html();
                     var pweight=$(this).parent().parent().parent().find(".active").html().slice(0,1);
                    $.ajax({
-                       url:"http://127.0.0.1:3000/content/addcart",
+                       url:"content/addcart",
                        type:"get",
                        data:{uid,pid,price,pname,pweight},
                        dataType:"json",
@@ -253,7 +253,7 @@ $(function(){
        });
     // 聚会专区
         $.ajax({
-            url:"http://127.0.0.1:3000/content/index_part",
+            url:"content/index_part",
             type:"get",
             data:{},
             dataType:"json",
@@ -352,7 +352,7 @@ $(function(){
                     var pname=$(this).parent().parent().parent().find(".floor_details>p.pname").html();
                     var pweight=$(this).parent().parent().parent().find(".active").html().slice(0,1);
                    $.ajax({
-                       url:"http://127.0.0.1:3000/content/addcart",
+                       url:"content/addcart",
                        type:"get",
                        data:{uid,pid,price,pname,pweight},
                        dataType:"json",
@@ -372,7 +372,7 @@ $(function(){
         })
     // 生日专区
         $.ajax({
-            url:"http://127.0.0.1:3000/content/index_birth",
+            url:"content/index_birth",
             type:"get",
             data:{},
             dataType:"json",
@@ -474,7 +474,7 @@ $(function(){
                     var pweight=$(this).parent().parent().parent().find(".active").html().slice(0,1);
                     
                    $.ajax({
-                       url:"http://127.0.0.1:3000/content/addcart",
+                       url:"content/addcart",
                        type:"get",
                        data:{uid,pid,price,pname,pweight},
                        dataType:"json",
@@ -493,7 +493,7 @@ $(function(){
         })
     // 文章专区
         $.ajax({
-            url:"http://127.0.0.1:3000/content/index_txt",
+            url:"content/index_txt",
             type:"get",
             data:{},
             dataType:"json",

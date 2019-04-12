@@ -108,7 +108,7 @@
     <script>
     var uid=sessionStorage.getItem("id");
     $.ajax({
-        url:"http://127.0.0.1:3000/content/username",
+        url:"content/username",
         type:"get",
         data:{
             uid
@@ -121,7 +121,7 @@
     var url=document.URL;
     id=url.split("=")[1];
     $.ajax({
-        url:"http://127.0.0.1:3000/content/txt_details?",
+        url:"content/txt_details?",
         type:"get",
         data:{id},
         dataType:"json",

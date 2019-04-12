@@ -393,7 +393,7 @@
             var pname1="";
             if(uid){
                 $.ajax({
-                url:"http://127.0.0.1:3000/content/username",
+                url:"content/username",
                 type:"get",
                 data:{uid},
                 dataType:"json",
@@ -405,7 +405,7 @@
             // 商品 图片展览区
             var pid=document.URL.split("=")[1];
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_pic",
+                    url:"content/details_pic",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -429,7 +429,7 @@
                 });
             // 商品 标题及提示
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_name",
+                    url:"content/details_name",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -441,7 +441,7 @@
                 });
             // 商品 分类
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_type",
+                    url:"content/details_type",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -455,7 +455,7 @@
                 });
             // 商品 内容
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_content",
+                    url:"content/details_content",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -481,7 +481,7 @@
                 });  
             // 商品 重量
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_weight",
+                    url:"content/details_weight",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -510,7 +510,7 @@
                 });  
             //商品  尺寸合适人群
             $.ajax({
-                    url:"http://127.0.0.1:3000/content/details_adpt",
+                    url:"content/details_adpt",
                     type:"get",
                     data:{pid},
                     dataType:"json",
@@ -576,7 +576,7 @@
                         var pweight=$(".active").html().slice(0,1);
                         console.log(uid)
                         $.ajax({
-                            url:"http://127.0.0.1:3000/content/addcart",
+                            url:"content/addcart",
                             type:"get",
                             data:{uid,pid,price,pname,pweight},
                             dataType:"json",
@@ -602,7 +602,7 @@
                         var pname=pname1;
                         var pweight=$(".active").html().slice(0,1);
                         $.ajax({
-                            url:"http://127.0.0.1:3000/content/addcart",
+                            url:"content/addcart",
                             type:"get",
                             data:{uid,pid,price,pname,pweight},
                             dataType:"json",

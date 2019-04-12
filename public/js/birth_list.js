@@ -1,6 +1,6 @@
 $(function(){
     $.ajax({
-        url:"http://127.0.0.1:3000/content/products_birth",
+        url:"content/products_birth",
         type:"get",
         data:{},
         dataType:"json",
