@@ -383,7 +383,7 @@
             var email=$("#email").val();
             
             $.ajax({
-                url:"http://127.0.0.1:3000/content/reg",
+                url:"content/reg",
                 type:"post",
                 data:{
                     uname:reg_uname,
@@ -414,7 +414,7 @@
                     alert("请输入验证码");
                 }else if(test==str){
                     $.ajax({
-                    url:"http://127.0.0.1:3000/content/login",
+                    url:"content/login",
                     type:"get",
                     data:{
                         uname:login_uname,

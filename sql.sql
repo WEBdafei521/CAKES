@@ -1,9 +1,4 @@
-mysql -uroot
 
-set names=utf8;
-drop database if exists Cake;
-create database Cake charset=UTF8;
-use Cake;
 /*用户注册*/
 create table user(
     uid int primary key auto_increment,
