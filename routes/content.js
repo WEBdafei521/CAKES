@@ -6,7 +6,7 @@ var pool=mysql.createPool({
 	user     : process.env.ACCESSKEY,
 	password : process.env.SECRETKEY,
 	database : 'app_' + process.env.APPNAME,
-	connectionLimit:3
+	connectionLimit:3,
 });
 var router=express.Router();
 //从数据空中拿出点击所对应的数据

@@ -19,12 +19,3 @@ server.use(session({
   }
 }));
 server.use('/content',content);
-server.get('/asd',(req,res)=>{
-	var id=req.query.id;
-	req.session.uid=id;
-	res.send(`<a href="http://127.0.0.1:3000/qwe">123</a>`)
-});
-server.get('/qwe',(req,res)=>{
-	var i=req.session.uid;
-	res.send(i);
-});
