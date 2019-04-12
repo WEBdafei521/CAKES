@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        body,div,img,ul,li,p,h1,h2,h3,h4,h5,h6,a{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .mycolor{
+            color: #684029;
+        }
+        .myfont{
+            font-size: 14px !important;
+            font-weight: 500;
+        }
+        .mycolor:hover{
+            text-decoration: none;
+        }
+        div.header>div:nth-child(2){
+            margin: 0 auto;
+            background: #fff;
+            line-height: 80px;
+            display: flex;
+            position: relative;
+        }
+        .header_top{
+            height: 80px;
+            width: 100%;
+            border: 1px solid transparent;
+        }
+        .header{
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            top: 0px;
+            background: #fff;
+            z-index: 3;
+            box-sizing: border-box;
+            border-bottom: 2px solid #ddd;
+            box-shadow: 0px 1px 5px  #ddd;
+        }
+        @media screen and (min-width:1200px){
+            div.header>div:nth-child(2){
+                width:80%;
+                height: 70px;
+            } 
+            div.header>div:nth-child(2)>ul{
+                display: flex;
+                margin-left:50px; 
+            }
+            div.header>div:nth-child(2)>ul a{
+                display: inline-block;
+                width: 100px;
+                text-align: center;
+                font-size: 14px;
+            }
+            .where{
+                position: absolute;
+                right: 0;
+                
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1199px){
+            div.header>div:nth-child(2){
+                width:80%;
+                height: 70px;
+            } 
+            div.header>div:nth-child(2)>ul{
+                display: none 
+            }
+            div.header>div:nth-child(2)>ul a{
+                display: none;
+            }
+            
+        }
+        @media screen and (min-width:768px) and (max-width:991px){
+            div.header>div:nth-child(2){
+                width:80%;
+                height: 70px;
+            } 
+            div.header>div:nth-child(2)>ul{
+                display: none;
+            }
+            div.header>div:nth-child(2)>ul a{
+                display: none;
+            }
+            .asd{
+                display: none;
+            }
+        }
+        @media screen  and (max-width:767px){
+            div.header>div:nth-child(2){
+                width:80%;
+                height: 70px;
+                margin: 0;
+            } 
+            div.header>div:nth-child(2)>ul{
+                display: none;
+            }
+            div.header>div:nth-child(2)>ul a{
+                display: none;
+            }
+            .asd{
+                display: none;
+            }
+            .where{
+                margin-left: 15px !important;
+            }
+        } 
+        .where{
+            display: flex;
+            margin: 0 0 0 40px;
+        }
+        div.where a, div.where ul,div.where div{
+            width: 60px;
+            font-size:14px; 
+            text-align: center; 
+        }
+        div.where ul{
+            width: 100px;
+            height:0px;
+            border: 0px solid #BB9772;
+            overflow: hidden;
+            position: absolute;
+            margin-left: -15px;
+            transition: all .5s;
+        }
+        div.where>div>ul>li{
+            height: 30px;
+        }
+        div.where ul.none{
+            display: block;
+            width: 100px;
+            height:130px;
+            border: 1px solid #BB9772;
+            position: absolute;
+            top:70px;
+            border-top: 0;
+            background: #fff;
+            z-index:2;
+        }
+        #tbody{
+            margin-top: 50px;
+        }
+        #tbody ul li img{
+            border: 1px solid rgba(24, 25,25, .1);
+            border-top: 0;
+            box-shadow: 1px 1px 2px rgba(24, 25,25, .1);
+        }
+        .floor_top{
+            margin-top:30px; 
+            display: flex;
+            text-align: center;
+            align-items: baseline;
+        }
+        .floor_top:hover{
+            text-decoration: none;
+        }
+        .tupian img{
+            background: #fafafa;
+           
+        }
+        .where:hover ul{
+            display: block;
+        } 
+        .floor_add{
+            position: absolute;
+            width: 98%;
+            background: #fafafa;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+        @media screen and (min-width:1200px){
+            .img1{
+                height: 64%;
+            }
+            #img11{
+                height: 64%;
+            }
+            .tupian{
+                font-size: 14px;
+                height: 370px;
+                overflow: hidden;
+                border-bottom: 0px solid #d6c0a9;
+            }
+            .floor_add{
+                top: 370px;
+            }
+            .show{
+                top: 235px;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1199px){
+            .img1{
+                height: 54%;
+            }
+            #img11{
+                height: 54%;
+            }
+            .tupian{
+                font-size: 14px;
+                height: 360px;
+                overflow: hidden;
+                border-bottom: 0px solid #d6c0a9;
+            }
+            .floor_add{
+                top: 370px;
+            }
+            .show{
+                top: 235px;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:991px){
+            .img1{
+                height: 69%;
+            }
+            #img11{
+                height: 69%;
+            }
+            .tupian{
+                height: 430px;
+                overflow: hidden;
+            }
+            .floor_add{
+                width: 98%;
+                top: 430px;
+            }
+            .show{
+                top:348px;
+            }
+        }
+        @media screen and (max-width:767px){
+            .img1{
+                height: 73%;
+            }
+            #img11{
+                height: 73%;
+            }
+            .tupian{
+                font-size: 14px;
+                height: 610px;
+                overflow: hidden;
+                border-bottom: 0px solid #d6c0a9;
+            } 
+            .floor_add{
+                width: 100%;
+                top: 800px;
+            }
+            .show{
+                top: 480px;
+            }
+        }
+
+        
+        .floor_details>div{
+            border-bottom:3px dotted #d6c0a9; 
+            padding-bottom:10px; 
+            margin-bottom: 10px;
+        }
+        .directions{
+            display: inline-block;
+            border: 1px solid #d6c0a9;
+            margin: 4px;
+            padding: 0 5px 0 5px;
+            border-radius: 10px;
+            color:#d6c0a9;
+        }
+        .directions:hover{
+            color: #d6c0a9;
+            text-decoration:none;
+        }
+        .cards{
+            display: inline;
+            text-align: right;
+            float:right;
+            color:#FFF; 
+            background: #684029;
+            padding: 2px 5px 2px 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .cards:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+         .floor_details{
+            position: relative;
+        }
+        .floor_details span{
+            display: inline-block;
+        }
+        .cards:hover{
+            text-decoration:none;
+            color: #fff;
+        }
+        .floor_add>a{
+            display: inline-block;
+            width: 45px;
+            height: 25px;
+            text-align: center;
+            margin:15px 5px 15px 0 ;
+            margin-bottom: 12px;
+            line-height: 25px;
+            border: 1px solid #d6c0a9;
+        }
+        .floor_add>a:hover{
+            color: #684029;
+        }
+        .floor_add>p>a{
+            display: inline-block;
+            border: 1px solid #684029;
+            margin: 10px 0 15px 0;
+            width: 49%;
+            text-align: center;
+            color: #684029;
+        }
+        .floor_add>p>a:nth-child(2){
+            background: #684029;
+            color: #fff;
+        }
+        .floor_add>p>a:nth-child(2):hover{
+           text-decoration: none
+        }
+        .close1{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+        }
+        .close1 a{
+            color: #684029;
+            text-align: center;
+        }
+        .close1 a:hover{
+            text-decoration: none;
+        }
+        .active{
+            border:1px solid #684029 !important;
+        }
+        #floor6>.floor_top{
+            display: flex;
+            justify-content: space-between
+        }
+        #floor6 a.mycolor:hover{
+            text-decoration: none;
+            color: #d6c0a9;
+        }
+        #floor6_contains{
+            display: flex;
+            justify-content: space-between
+        }
+        #floor6_contains div{
+            width: 49%;
+            border: 1px solid rgb(224, 223, 223);
+            border-radius: 10px;
+            box-shadow: 0px 1px 1px rgb(250, 250, 250);
+        }
+        #floor6_contains div img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer{
+            width: 100%;
+            background: #333;
+            margin-top: 100px;
+            padding-top: 50px;
+        }
+        .footer>div:first-child{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .footer>div:nth-child(2){
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+        .footer>div:nth-child(2) a{
+            color: #fff;
+            font-weight: 600; 
+            display: inline-block;
+            margin: 0 50px 0 50px;
+        }
+        .footer>div:nth-child(2) a:hover{
+            text-decoration: none;
+        }
+        .footer>div:nth-child(3){
+            display: flex;
+            justify-content: center;
+        }
+        .footer>div:nth-child(3)>div{
+            width: 50px;
+            height: 50px;
+            margin:10px 20px 10px 20px; 
+            background: #555;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 25px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+        }
+        .footer>div:nth-child(3)>div>div{
+            position: absolute;
+            top: -100px;
+            left: -30px;
+            opacity: 0;
+            transition:all .3s; 
+        }
+        .hover{
+            opacity: 1 !important;
+        }
+        .footer>div:nth-child(4) hr{
+            border-bottom: 1px solid #9a9a9a;
+        }
+        .footer>div:nth-child(4) p{
+            color:#9a9a9a;
+            font-size: 14px;
+            text-align: center
+        }
+        .footer>div:nth-child(4){
+            padding: 10px;
+        }
+        #shopcart{
+            position: relative;
+        }
+        #shopcart>span{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            background: url("img/icon.png") no-repeat;
+            background-position: -286px -76px;
+            background-size: 310px 120px;
+            height: 18px;
+            margin-top: 9px;
+            text-align: center;
+            line-height: 25px;
+        }
+        .hide{
+            display: none
+        }
+    </style>
+</head>
+<body>
+    <div class="header_top"></div>
+    <div class="header">
+        <div></div>
+        <div>
+            <a href="index.html"><img src="img/logo.png" alt="" width="120px"></a>
+            <ul>
+                <li style="width:80px"><a href="#" class="mycolor">首页</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">蛋糕</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">面包</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">冰淇淋</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">咖啡下午茶</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">咖啡全国送</a></li>
+                <li style="width:80px"><a href="#" class="mycolor">企业专区</a></li>
+            </ul>
+            <div class="where">
+                <a href="#" class="mycolor ml-1 asd">APP下载</a>
+                <div class="asd">
+                    <a href="#" class="mycolor ml-3">北京</a>
+                    <ul class="">
+                        <li><a href="#" class="mycolor">上海</a></li>
+                        <li><a href="#" class="mycolor">杭州</a></li>
+                        <li><a href="#" class="mycolor">杭州</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="mycolor">消息</a>
+                <a href="login.html" id="login" class="mycolor ml-1 " style="text-align:center;">登陆</a>
+                <a href="login.html" id="logined" class="hide mycolor ml-1" style="text-align:center;">登陆</a>
+                <a href="javascript:;" id="back" class="hide mycolor">退出</a>
+                <a href="shopcart.html" style="margin-left:0px;" class="" id="shopcart">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+            <div id="demo" class="carousel" data-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- <div class="carousel-item active">
+                        <a href="#"><img src="img/2eb5adabe75b62a89a15cfeb16b3364a(1).jpg"class="w-100"/></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="img/89902fbb678d9c2fad4f22cc4c36deb6.jpg" class="w-100"/></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#"><img src="img/dc9145dbcc7f23defc8e542016ff532b.jpg" class="w-100"/></a>
+                    </div> -->
+                </div>
+                <ul class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#demo"></li>
+                    <li data-slide-to="1"  data-target="#demo"></li>
+                    <li data-slide-to="2"  data-target="#demo"></li>
+                </ul>
+                <a href="#demo" data-slide="prev" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#demo" data-slide="next" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+    </div>
+    <div class="container">
+        <div id="tbody">
+        <!-- 活动专区 -->
+            <ul class="row">
+                <li class="col-lg-3 col-sm-6  w-100"><a href="#floor1"><img src="img/xinpin.jpg" class="w-100" alt=""></a></li>
+                <li class="col-lg-3 col-sm-6  w-100"><a href="#floor2"><img src="img/ertong.png" class="w-100"  alt=""></a></li>
+                <li class="col-lg-3 col-sm-6  w-100"><a href="#floor3"><img src="img/juhui.png" class="w-100"  alt=""></a></li>
+                <li class="col-lg-3 col-sm-6  w-100"><a href="#floor4"><img src="img/shengri.png" class="w-100"  alt=""></a></li>
+            </ul>
+    <!-- 专区主要商品 -->
+            <!-- 新品专区 -->
+            <div id="floor1">
+                <div class="floor_top"><h3 class="mycolor mt-5">新品</h3><span class="mycolor myfont">/专区</span></div>
+                <div class="floor_body">
+                    <div class="mt-3"><a href="new_list.html"><img src="img/new.jpg" class="w-100" alt=""></a> </div>
+                    <div class="row m-0 mt-3 mb-5">
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2 ">
+                            <a href="#"><img class="w-100" src="img/new_1.png" id="img11" alt=""></a>
+                            <div class="floor_details">
+                                <p style="font-size: 15px">草莓奶油蛋糕</p>
+                                <p>甜润奶油，与草莓的自然甜度搭配</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">情侣></a>
+                                    <a href="javascript:;" class="directions">人气></a>
+                                    <a href="javascript:;" class="directions">情人节></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>  
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                            <a href="#"><img class="w-100" src="img/new_2.png" class="img1" alt=""></a>
+                            
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑森林</p>
+                                <p>樱桃酒味，从巧克力卷的缝隙飘出</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">情侣></a>
+                                    <a href="javascript:;" class="directions">人气></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                             <a href="#"><img class="w-100" src="img/new_3.png" class="img1" alt=""></a>
+                             
+                             <div class="floor_details">
+                                <p style="font-size: 15px">栗蓉暗香</p>
+                                <p>栗泥毛线球，点缀比利时黑巧克力豆</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">聚会></a>
+                                    <a href="javascript:;" class="directions">长辈></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2"> 
+                            <a href="#"><img class="w-100" src="img/new_4.png" class="img1" alt=""></a> 
+                            <div class="floor_details">
+                                <p style="font-size: 15px">小重组</p>
+                                <p>均一，轻褐的千层酥，三种“重组可能”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">情侣></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">聚会></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+            <!-- 生日专区 -->
+            <div id="floor4">
+                <div class="floor_top"><h3 class="mycolor mt-5">生日</h3><span class="mycolor myfont">/专区</span></div>
+                <div class="floor_body">
+                    <div class="mt-3"><a href="birth_list.html"> <img src="img/floor.jpg" class="w-100" alt=""></a></div>
+                    <div class="row m-0 mt-3 mb-5">
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2 ">
+                            <a href="#"><img class="w-100" src="img/floor1_1.png" alt=""></a>
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                            <a href="#"><img class="w-100" src="img/floor1_2.png" alt=""></a>
+                            
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                             <a href="#"><img class="w-100" src="img/floor1_3.png" alt=""></a>
+                             
+                             <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2"> 
+                            <a href="#"><img class="w-100" src="img/floor1_4.png" alt=""></a> 
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                            
+                    
+                        </div>
+                </div>
+                </div>
+            </div>
+            <!-- 儿童专区 -->
+            <div id="floor2">
+                <div class="floor_top"><h3 class="mycolor mt-5">儿童</h3><span class="mycolor myfont">/专区</span></div>
+                <div class="floor_body">
+                    <div class="mt-3"><img src="img/child.jpg" class="w-100" alt=""></div>
+                    <div class="row m-0 mt-3 mb-5">
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2 ">
+                            <a href="#"><img class="w-100" src="img/child_1.png" alt=""></a>
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                            <a href="#"><img class="w-100" src="img/child_2.png" alt=""></a>
+                            
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                             <a href="#"><img class="w-100" src="img/child_3.png" alt=""></a>
+                             
+                             <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2"> 
+                            <a href="#"><img class="w-100" src="img/child_4.png" alt=""></a> 
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <!-- 聚会专区 -->
+            <div id="floor3">
+                <div class="floor_top"><h3 class="mycolor mt-5">聚会</h3><span class="mycolor myfont">/专区</span></div>
+                <div class="floor_body">
+                    <div class="mt-3"><img src="img/part.jpg" class="w-100" alt=""></div>
+                    <div class="row m-0 mt-3 mb-5">
+                        <!-- <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2 ">
+                            <a href="#"><img class="w-100" src="img/part_1.png" alt=""></a>
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                            <a href="#"><img class="w-100" src="img/part_2.png" alt=""></a>
+                            
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                         </div>
+                         <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2">
+                             <a href="#"><img class="w-100" src="img/part_3.png" alt=""></a>
+                             
+                             <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mycolor tupian p-0 pr-2"> 
+                            <a href="#"><img class="w-100" src="img/part_4.png" alt=""></a> 
+                            <div class="floor_details">
+                                <p style="font-size: 15px">黑白巧克力慕斯 彼尔德（Party）</p>
+                                <p>“ 孩子的世界，简单到非黑即白。”</p>
+                                <div class="mt-1 mb-1">
+                                    <a href="javascript:;" class="directions">儿童></a>
+                                    <a href="javascript:;" class="directions">新品></a>
+                                    <a href="javascript:;" class="directions">相识></a>
+                                </div>
+                                <span class="mt-2">¥298.00/2.0磅</span>
+                                <a href="javascript:;" class="cards mt-2">加入购物车</a>
+                            </div>
+                            <div class="floor_add mycolor">
+                                <div class="close1">
+                                    <span class="count">¥198.00/1.0磅</span>
+                                    <span type="text" class="count1" style="display:none">198</span>
+                                    <a href="javascript:;" title="关闭" class="h4">X</a>
+                                </div>
+                                <a href="javascript:;" class="mycolor active" title="yes">1.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">2.0磅</a>
+                                <a href="javascript:;" class="mycolor" title="no">3.0磅</a>
+                                <p>
+                                    <a href="javascript:;" class="mycolor">立即购买</a>
+                                    <a href="javascript:;">加入购物车</a>
+                                </p>
+                            </div>
+                            
+                        </div> -->
+                </div>
+                </div>
+            </div>
+            <!-- 活动门 -->
+            <div id="floor5">
+                <div class="floor_top">
+                    <h3 class="mycolor mt-3">活动门</h3><span class="mycolor myfont">/是被吸引了吧</span>
+                </div>
+                <img src="img/810af7fb1f079477c8aec960d11fa4df.jpg" width="100%" alt="">
+            </div>
+            <!-- 甘一客 -->
+            <div id="floor6" class="mb-5">
+                <div class="floor_top">
+                    <div class="mt-2 mb-2">
+                        <h3 class="mycolor mt-3">甘一客<span class="mycolor myfont">/是被吸引了吧</span></h3>
+                    </div>
+                    <div>
+                        <a href="txt.html" class="mycolor myfont">查看更多>></a>
+                    </div>
+                </div>
+                <div id="floor6_contains">
+                    <!-- <div>
+                        <a href="txt_details.html?lid=1"><img src="img/txt_1.jpg" class="border" alt=""></a>
+                        <h3 class="m-3">冬季刊·进博会</h3>
+                        <a href="txt_details.html?lid=1" class="m-3 mycolor myfont">阅读全文 > ></a>
+                    </div>
+                    <div>
+                        <a href="txt_details.html?lid=2"><img src="img/txt_2.jpg" class="border" alt=""></a>
+                        <h3 class="m-3">廿一志秋刊·客服Q&A</h3>
+                        <a href="txt_details.html?lid=2" class="m-3 mycolor myfont">阅读全文 > ></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <img src="img/footer-logo.png" width="96px" alt="">
+        </div>
+        <div>
+            <a href="javascript:;" class="myfont">联系我们</a>|
+            <a href="javascript:;" class="myfont">订购帮助</a>|
+            <a href="javascript:;" class="myfont">企业合作</a>|
+            <a href="javascript:;" class="myfont">生产经营资质</a>|
+            <a href="javascript:;" class="myfont">公告专区</a>
+        </div>
+        <div>
+            <div>
+                <img src="img/footericon-01.png" width="60%" alt="">
+            </div>
+            <div class="erweima">
+                <img src="img/footericon-02.png" alt="" width="60%">
+                <div><img src="img/footer-erweima (1).png" width="100px alt=""></div>
+            </div>
+            <div class="erweima1">APP
+                <div><img src="img/footer-erweima (1).png" width="100px" alt=""></div>
+            </div>
+        </div>
+        <div>
+            <p>订购专线：400 650 2121（服务时间 08:00–22:00）</p>
+            <p>客服电话：021-23099721（全国） | kefu@21cake.com（邮箱）</p>
+            <p>杭州/广州：提前5小时预订；北京：提前6小时预订；上海：提前5.5-6小时预订；天津/苏州/无锡/深圳：提前8小时预订（部分偏远地区除外，当日22点以后订单，于次日8点开始审核） </p>
+            <p>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津：10:30；苏州/无锡/深圳：11:00</p>
+            <p>网站注册公司名称: 北京廿一客食品有限公司 地址: 北京市北京经济技术开发区兴海二街5号院3号楼 </p>
+            <hr>
+            <p>Copyright© 21Cake蛋糕官网商城 2007-2018, 版权所有 </p>
+        </div> 
+    </div> 
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/index.js"></script>
+    <script>  
+        var uid=sessionStorage.getItem("id");
+        var uname=sessionStorage.getItem("uname");
+        $(".where>div").mousemove(function(){
+            $(".where>div>ul").addClass("none");
+        })
+        $(".where>div").mouseout(function(){
+            $(".where>div>ul").removeClass("none");
+        });
+        if(uname){
+            console.log(1)
+            $("#login").removeAttr("href").html(`欢迎,${uname}`);
+            $("#shopcart").css({display:"block"});
+            $("#back").removeClass("hide")
+            $("#logined").addClass("hide")
+        }else{
+            $("#logined").addClass("hide")
+        }
+        // 退出登录
+        $("#back").click(function(){
+            if(confirm(`请您是否要退出账号:${uname}`)){
+                sessionStorage.setItem("id","");
+                sessionStorage.setItem("uname","");
+                $("#login").addClass("hide");
+                $("#logined").removeClass("hide")
+                $(this).addClass("hide")
+            }
+        })
+        //点击加入购物车
+        $(".cards").click(function(){
+            //判断是有含有 title属性值为yes的div，如果有，改变title的值为no
+            if($("div[title=yes]").length==1){
+                $("div[title=yes]")
+                .removeClass("show")
+                .attr("title","no");
+                $(this)
+                .parent()
+                .next()
+                .addClass("show")
+                .attr("title","yes");
+            }else{
+            // 如果没有，就将title的值设置为yes，并且添加class属性值：show
+                $(this)
+                .parent()
+                .next()
+                .addClass("show")
+                .attr("title","yes");
+            }
+        });
+        $(".close1").click(function(){
+            $(this)
+            .parent()
+            .removeClass("show")
+            .attr("title","no");
+        });
+        $("div.floor_add>a").click(function(e){
+            e.preventDefault();
+            if($("div.floor_add>a[title=yes]")){
+                $("div.floor_add>a[title=yes]")
+                .removeClass("active")
+                .attr("title","no");
+                $(this).addClass("active")
+                .attr("title","yes");
+            }else{
+                $(this)
+                .addClass("active")
+                .attr("title","yes");
+            }
+            //查看商品的重量
+            var sum=Number($(this).html().slice(0,-1));
+            //查看商品的价格
+            var priceString=$(this)
+                            .parent()
+                            .find(".count1")
+                            .html();       
+            var price=parseInt(priceString);
+            $(this)
+            .parent()
+            .find(".count")
+            .html(`￥${price*sum}.00/${sum}.0磅`);
+        }) 
+        //footer  滑入显示二维码
+        $(".erweima").hover(function(){ 
+            $(this).find("div").toggleClass("hover") 
+	    })
+        $(".erweima1").hover(function(){ 
+            $(this).find("div").toggleClass("hover") 
+	    });
+
+    </script>
+</body>
+</html>

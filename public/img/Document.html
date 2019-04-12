@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:3000/details.html?lid=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Document_files/bootstrap.css">
+    <script src="./Document_files/jquery.min.js.下载"></script>
+    <script src="./Document_files/popper.min.js.下载"></script>
+    <script src="./Document_files/bootstrap.min.js.下载"></script>
+    <link rel="stylesheet" href="./Document_files/top.css">
+    <style>
+        .pic_middle{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .directions{
+            display: inline-block;
+            border: 1px solid #d6c0a9;
+            margin: 4px;
+            padding: 0 5px 0 5px;
+            border-radius: 10px;
+            color:#d6c0a9;
+        }
+        .directions:hover{
+            color: #d6c0a9;
+            text-decoration:none;
+        }
+        #picture{
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        .details{
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+        @media screen and (min-width:1200px){
+            .details>div:nth-child(1){
+                width: 45%;
+                box-sizing: border-box;
+            }
+            .details>div:nth-child(2){
+                width: 55%;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+            }
+        }
+        @media screen and (min-width:976px) and (max-width:1199px){
+            .details>div:nth-child(1){
+                width: 45%;
+                box-sizing: border-box;
+            }
+            .details>div:nth-child(2){
+                width: 55%;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+            }
+        }
+        @media screen and (max-width:975px){
+            .details>div:nth-child(1){
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .details>div:nth-child(2){
+                width: 100%;
+                border: 1px solid transparent;
+                box-sizing: border-box;
+            }
+        }
+        .mytitle{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #C69C6D !important;
+        }
+        .condition>span:nth-child(1){
+            display: inline-block;
+            background-image: url(img/icon.png);
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-position: -116px 7px;
+            background-size: 240px auto;
+            height: 34px;
+            width: 28px;
+        }
+        .warm{
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .myfont{
+            font-size: 12px !important;
+        }
+        .details_size{
+            color: #C69C6D;
+            font-size: 24px;
+            display: flex;
+        }
+        .details_size ul{
+            display: flex;
+            margin: 0px 0 0 10px;
+            flex-direction: column;
+            justify-content: space-around
+        }
+        .details_size ul li{
+            margin-top: 0px;
+            height: 25px;
+            line-height: 32px;
+        }
+        .details_size>ul.none{
+            display: none;
+        }
+        ul.show{
+            display: block;
+           
+        }
+        ul.show>li{
+             margin-top:8px; 
+        }
+        .details_size ul li:nth-child(1) span{
+            background: url(img/icon.png);
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: top;
+            background-position: -208px -0px;
+            background-size: 310px 120px;
+            background-repeat: no-repeat;
+        }
+        .details_size ul li:nth-child(2) span{
+            background: url(img/icon.png);
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: top;
+            background-position: -235px -0px;
+            background-size: 310px 120px;
+            background-repeat: no-repeat;
+        }
+        .details_size ul li:nth-child(3) span{
+            background: url(img/icon.png);
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: top;
+            background-position: -259px -0px;
+            background-size: 310px 120px;
+            background-repeat: no-repeat;
+        }
+        .details_size ul li:nth-child(4) span{
+            background: url(img/icon.png);
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: top;
+            background-position: -284px -0px;
+            background-size: 310px 120px;
+            background-repeat: no-repeat;
+        }
+        .details_weight{
+            display: inline-block;
+            color: #C69C6D;
+            width: 40px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            margin: 10px;
+            border:1px solid #C69C6D;
+        }
+        .details_weight:hover{
+            text-decoration: none;
+            color: #C69C6D;
+        }
+        .active{
+            border: 1px solid #684029;
+            position: relative;
+            
+        }
+        .active::before{
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #684029;
+            position: absolute;
+            left: 0;
+            background:  url(img/icon.png) no-repeat;
+            background-position: 0px -40px;
+            background-size: 310px 120px;
+        }
+       #pic_lg{
+           width: 987px;
+           height: 510px;
+           padding-left: 0;
+           overflow: hidden;
+       }
+       .details_buy .join{
+           background: #C69C6D;
+           margin-left:20px; 
+       }
+       .details_buy .join:hover{
+           background: #684029; 
+       }
+
+    </style>
+</head>
+<body>
+    <!-- top -->
+    <div class="header_top"></div>
+    <div class="header">
+        <div></div>
+        <div>
+            <a href="http://127.0.0.1:3000/index.html"><img src="./Document_files/logo.png" alt="" width="120px"></a>
+            <ul>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">首页</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">蛋糕</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">面包</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">冰淇淋</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">咖啡下午茶</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">咖啡全国送</a></li>
+                <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">企业专区</a></li>
+            </ul>
+            <div class="where">
+                <a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">APP下载</a>
+                
+                <div>
+                    <a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">北京</a>
+                    <ul class="">
+                        <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">上海</a></li>
+                        <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">杭州</a></li>
+                        <li><a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">杭州</a></li>
+                    </ul>
+                </div>
+                <a href="http://127.0.0.1:3000/details.html?lid=1#" class="mycolor">消息</a>
+                <a href="http://127.0.0.1:3000/login.html" id="login" class="mycolor" style="text-align:right;">登陆</a>
+                <a href="http://127.0.0.1:3000/login.html" class="mycolor" style="text-align:left;">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row " id="picture"><div class="col-11" id="pic_lg">
+                    <img src="./Document_files/2eb5adabe75b62a89a15cfeb16b3364a(1).jpg" class="w-100 pic_lg" alt="">
+                    </div>
+                    <div class="col-1 pic_middle" id="pic_sm">
+                        <img src="./Document_files/product1_1.jpg" class="w-100 mb-3 pic_s" alt="">
+                        <img src="./Document_files/product1_2.jpg" class="w-100 mb-3 pic_s" alt="">
+                        <img src="http://127.0.0.1:3000/details.html?lid=1" class="w-100 mb-3 pic_s" alt="">
+                        <img src="http://127.0.0.1:3000/details.html?lid=1" class="w-100 mb-3 pic_s" alt="">
+                        <img src="http://127.0.0.1:3000/details.html?lid=1" class="w-100 mb-3 pic_s" alt="">
+                    </div></div>
+        <div class="details">
+            <div class="details_left">
+                <p class="mycolor mytitle">一家三口</p>
+                <p class="warm">一家三口 39.9元</p>
+                <div id="details_type"><a href="http://127.0.0.1:3000/birth_list.html" class="directions">生日&gt;</a>
+                    <a href="http://127.0.0.1:3000/new_list.html" class="directions">新品&gt;</a>
+                    <a href="http://127.0.0.1:3000/details.html?lid=1" class="directions">&gt;</a></div>
+                <p>
+                    <img src="./Document_files/caomei.png" width="50px" alt="">
+                    <span class="mycolor myfont">红颜草莓，糖度&gt;8%</span>
+                </p>
+                <div id="details_content"><span class="mycolor myfont ">/草莓配奶油，从王室，前往温布尔登的雨季/</span>
+                    <p class="mycolor myfont">Now 21cake has encapsulated this gloriously English tradition in square cake form. At Wimbledon, which dates back to 1877, proto</p>
+                    <p class="condition">
+                        <span></span>
+                        <span class="mycolor myfont">保鲜条件：0－4℃保藏10小时，5℃食用为佳</span>
+                    </p>
+                    <div>
+                        <img src="./Document_files/sweet_02.png" alt="">
+                        <span class="mycolor myfont pl-2">参考甜度:</span>
+                        <img src="./Document_files/sweet_02.png" class="pl-1" alt="">
+                        <img src="./Document_files/sweet_02.png" class="pl-1" alt="">
+                        <img src="./Document_files/sweet_02.png" class="pl-1" alt="">
+                        <img src="./Document_files/sweet_01.png" class="pl-1" alt="">
+                        <img src="./Document_files/sweet_01.png" class="pl-1" alt="">
+                    </div></div>
+            </div>
+            <div class="details_right">
+                <!-- 商品尺寸 -->
+                <div class="details_size">
+                    <div>
+                       <img src="./Document_files/size_m.jpg" width="300px" alt=""> 
+                    </div>
+                    <ul class="none" id="ul1">
+                        <li class="myfont"><span></span>1 约17.5x17.5</li>
+                        <li class="myfont"><span></span>2适合7-8人分享</li>
+                        <li class="myfont"><span></span>3含10套餐具（蜡烛需单独订购）</li>
+                        <li class="myfont"><span></span>4最早今天 18:00配送</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>
+                    <ul class="none" id="ul2">
+                        <li class="myfont"><span></span> 213122约17.5x17.5</li>
+                        <li class="myfont"><span></span>21321适合7-8人分享</li>
+                        <li class="myfont"><span></span>含21312310套餐具（蜡烛需单独订购）</li>
+                        <li class="myfont"><span></span>最12312早今天 18:00配送</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>
+                    <ul class="show" id="ul3">
+                        <li class="myfont"><span></span>3 1231.5x17.5</li>
+                        <li class="myfont"><span></span>适合7-8人分享</li>
+                        <li class="myfont"><span></span>含10套餐具（蜡烛需单独订购）</li>
+                        <li class="myfont"><span></span>最早今天 18:00配送</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>
+                    <ul class="none" id="ul4">
+                        <li class="myfont"><span></span>3 1231约17.5x17.5</li>
+                        <li class="myfont"><span></span>适合7-8人分享</li>
+                        <li class="myfont"><span></span>含10套餐具（蜡烛需单独订购）</li>
+                        <li class="myfont"><span></span>最早今天 18:00配送</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>
+                    <ul class="none" id="ul5">
+                        <li class="myfont"><span></span> 4约17.5x17.5</li>
+                        <li class="myfont"><span></span>适12312合7-8人分享</li>
+                        <li class="myfont"><span></span>含10套餐具（蜡烛需单独订购）</li>
+                        <li class="myfont"><span></span>最早今天 18:00配送</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>
+                </div>
+                <!-- 商品规格 -->
+                <div class="details_buy">
+                    <span class="mycolor myfont ml-5">商品规格 
+                        <a href="javascript:;" class="details_weight active" data-id="ul1" data-img="img/size_smm.jpg">1.0磅</a> 
+                        <a href="javascript:;" class="details_weight" data-id="ul2" data-img="img/size_m.jpg">2.0磅</a> 
+                        <a href="javascript:;" class="details_weight" data-id="ul3" data-img="img/size_md.jpg">3.0磅</a> 
+                        <a href="javascript:;" class="details_weight" data-id="ul4" data-img="img/size_lg.jpg">4.0磅</a> 
+                        <a href="javascript:;" class="details_weight" data-id="ul5" data-img="img/size_sp.jpg">5.0磅</a> 
+                    </span>
+                    <p class="ml-5">
+                        <button class="btn w-25 mr-5">立即购买</button>
+                        <button class="btn w-25 join">加入购物车</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="details_picture">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+            <div>
+                <img src="./Document_files/footer-logo.png" width="96px" alt="">
+            </div>
+            <div>
+                <a href="javascript:;" class="myfont">联系我们</a>|
+                <a href="javascript:;" class="myfont">订购帮助</a>|
+                <a href="javascript:;" class="myfont">企业合作</a>|
+                <a href="javascript:;" class="myfont">生产经营资质</a>|
+                <a href="javascript:;" class="myfont">公告专区</a>
+            </div>
+            <div>
+                <div>
+                    <img src="./Document_files/footericon-01.png" width="60%" alt="">
+                </div>
+                <div class="erweima">
+                    <img src="./Document_files/footericon-02.png" alt="" width="60%">
+                    <div><img src="./Document_files/footer-erweima (1).png" width="100px alt=" "=""></div>
+                </div>
+                <div class="erweima1">APP
+                    <div><img src="./Document_files/footer-erweima (1).png" width="100px" alt=""></div>
+                </div>
+            </div>
+            <div>
+                <p>订购专线：400 650 2121（服务时间 08:00–22:00）</p>
+                <p>客服电话：021-23099721（全国） | kefu@21cake.com（邮箱）</p>
+                <p>杭州/广州：提前5小时预订；北京：提前6小时预订；上海：提前5.5-6小时预订；天津/苏州/无锡/深圳：提前8小时预订（部分偏远地区除外，当日22点以后订单，于次日8点开始审核） </p>
+                <p>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津：10:30；苏州/无锡/深圳：11:00</p>
+                <p>网站注册公司名称: 北京廿一客食品有限公司 地址: 北京市北京经济技术开发区兴海二街5号院3号楼 </p>
+                <hr>
+                <p>Copyright© 21Cake蛋糕官网商城 2007-2018, 版权所有 </p>
+            </div> 
+        </div> 
+    <script src="./Document_files/bootstrap.js.下载"></script>
+    <script src="./Document_files/jquery-3.2.1.js.下载"></script>
+    <script>
+$(function(){
+    // 商品 图片展览区
+        var pid=document.URL.split("=")[1];
+        $.ajax({
+            url:"http://127.0.0.1:3000/content/details_pic",
+            type:"get",
+            data:{pid},
+            dataType:"json",
+            success:function(result){
+                var html="";
+                html=`<div class="col-11" id="pic_lg">
+                    <img src="${result[0].pic_lg}" class="w-100 pic_lg" alt="">
+                    </div>
+                    <div class="col-1 pic_middle" id="pic_sm">
+                        <img src="${result[0].pic_sm1}" class="w-100 mb-3 pic_s" alt="">
+                        <img src="${result[0].pic_sm2}" class="w-100 mb-3 pic_s" alt="">
+                        <img src="${result[0].pic_sm3}" class="w-100 mb-3 pic_s" alt="">
+                        <img src="${result[0].pic_sm4}" class="w-100 mb-3 pic_s" alt="">
+                        <img src="${result[0].pic_sm5}" class="w-100 mb-3 pic_s" alt="">
+                    </div>`
+                $("#picture").html(html)
+                $(".pic_s").mouseover(function(){
+                    var img=$(this).attr("src");
+                    $(".pic_lg").attr({src:img})
+                });
+            }
+        });
+    // 商品 标题及提示
+        $.ajax({
+            url:"http://127.0.0.1:3000/content/details_name",
+            type:"get",
+            data:{pid},
+            dataType:"json",
+            success:function(result){
+                $(".mytitle").html(result[0].uname)
+                $(".warm").html(result[0].warm)
+            }
+        });
+    // 商品 分类
+        $.ajax({
+            url:"http://127.0.0.1:3000/content/details_type",
+            type:"get",
+            data:{pid},
+            dataType:"json",
+            success:function(result){
+                var html="";
+                html+=`<a href="${result[0].type1_url}" class="directions">${result[0].type1}></a>
+                    <a href="${result[0].type2_url}" class="directions">${result[0].type2}></a>
+                    <a href="${result[0].type3_url}" class="directions">${result[0].type3}></a>`
+                $("#details_type").html(html);
+            }
+        });
+    // 商品 内容
+        $.ajax({
+            url:"http://127.0.0.1:3000/content/details_content",
+            type:"get",
+            data:{pid},
+            dataType:"json",
+            success:function(result){
+                var html="";
+                html=`<span class="mycolor myfont ">${result[0].content1}</span>
+                    <p class="mycolor myfont">${result[0].content12}</p>
+                    <p class="condition">
+                        <span></span>
+                        <span class="mycolor myfont">保鲜条件：${result[0].conditions}</span>
+                    </p>
+                    <div>
+                        <img src="img/sweet_02.png" alt="">
+                        <span class="mycolor myfont pl-2">参考甜度:</span>
+                        <img src="${result[0].sweet1}" class="pl-1" alt="">
+                        <img src="${result[0].sweet2}" class="pl-1"  alt="">
+                        <img src="${result[0].sweet3}" class="pl-1"  alt="">
+                        <img src="${result[0].sweet4}" class="pl-1"  alt="">
+                        <img src="${result[0].sweet5}" class="pl-1"  alt="">
+                    </div>`
+               $("#details_content").html(html);
+            }
+        });  
+    // 商品 重量
+        $.ajax({
+            url:"http://127.0.0.1:3000/content/details_weight",
+            type:"get",
+            data:{pid},
+            dataType:"json",
+            success:function(result){
+                console.log(result)
+                var html1="";
+                var html2="";
+                console.log(result[0].details_price)
+                for(var res of result){
+                    html1=`<ul class="none" id="ul1">
+                        <li class="myfont"><span></span>${res.details_size}</li>
+                        <li class="myfont"><span></span>${res.details_adpt}</li>
+                        <li class="myfont"><span></span>${res.details_contain}</li>
+                        <li class="myfont"><span></span>${res.details_send}</li>
+                        <li class="">￥228.00/2.0磅</li>
+                    </ul>`
+                }
+                
+            }
+        });  
+       
+       
+       
+       
+        $(".pic_s").mouseover(function(){
+           var img=$(this).attr("src");
+           $(".pic_lg").attr({src:img})
+       });
+       $(".details_weight").click(function(){
+            $(".active").removeClass("active");
+            $(this).addClass("active");
+            var img_url=$(this).attr("data-img")
+            $(".details_size").find("img").attr({src:img_url});
+            // 点击重量，将页面中的规格替换掉
+            var id=$(this).attr("data-id")
+            $(".details_size>ul.show").removeClass("show").addClass("none");
+            $("#"+id).attr("class","show");
+       });
+})
+       
+    </script>
+
+</body></html>

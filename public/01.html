@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <ul id="content">
+        <li class="li">123</li>
+        <li class="li">333</li>
+        <li class="li">444</li>
+        <li class="li">555</li>
+    </ul>
+   <script src="js/jquery-3.2.1.js"></script>
+   <script type="text/javascript">
+        $("#content").click(function(){
+            var _that=this;
+            console.log(_that)
+            $(".li").each(function(e){
+                console.log(this)
+            })
+        })
+       var lilei={
+           sname:"lilei",
+           friends:["tom","jerry"],
+           intr:function(){
+               this.friends.forEach(elem=>{
+                   document.write(`<h1>${this.sname}认识${elem}</h1>`)
+               })
+           }
+       } 
+    //    lilei.intr()
+    function far(){
+        var title=1000;
+        return function chi(e){
+            title-=e;
+            console.log(title)
+        }.bind(this)
+    }
+    var pay=far();
+    
+
+    var obj={
+            title:1000,
+            chi:function(){
+                return this.title-=100
+            }
+        }
+    
+    
+        
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+    console.log(obj.chi())
+   </script>
+</body>
+</html>

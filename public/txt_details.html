@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/top.css">
+    <style>
+        .tupian{
+            text-align: center;
+            width: 1200px;
+        }
+        .tupian img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_top"></div>
+    <div class="header">
+            <div></div>
+            <div>
+                <a href="index.html"><img src="img/logo.png" alt="" width="120px"></a>
+                <ul>
+                    <li><a href="#" class="mycolor">首页</a></li>
+                    <li><a href="#" class="mycolor">蛋糕</a></li>
+                    <li><a href="#" class="mycolor">面包</a></li>
+                    <li><a href="#" class="mycolor">冰淇淋</a></li>
+                    <li><a href="#" class="mycolor">咖啡下午茶</a></li>
+                    <li><a href="#" class="mycolor">咖啡全国送</a></li>
+                    <li><a href="#" class="mycolor">企业专区</a></li>
+                </ul>
+                <div class="where">
+                    <a href="#" class="mycolor">APP下载</a>
+                    
+                    <div>
+                        <a href="#" class="mycolor">北京</a>
+                        <ul class="">
+                            <li><a href="#" class="mycolor">上海</a></li>
+                            <li><a href="#" class="mycolor">杭州</a></li>
+                            <li><a href="#" class="mycolor">杭州</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="mycolor">消息</a>
+                    <a href="login.html" id="login" class="mycolor" style="text-align:right;">登陆</a>
+                    <a href="login.html" class="mycolor" style="text-align:left;">注册</a>
+                </div>
+            </div>
+    </div>
+    <!-- 文章内容 -->
+    <div class="container">
+        <div>
+            <h3 class="mycolor">廿一志秋刊·客服Q&A</h3>
+            <span class="myfont">发布时间:2018.12.23</span>
+            <hr>
+        </div>
+        <div class="tupian row">
+            <!-- <img src="img/txt1_1.jpg" alt="">
+            <img src="img/txt1_2.jpg" alt="">
+            <img src="img/txt1_3.jpg" alt="">
+            <img src="img/txt1_4.jpg" alt="">
+            <img src="img/txt1_5.jpg" alt="">
+            <img src="img/txt1_6.jpg" alt="">
+            <img src="img/txt1_7.jpg" alt=""> -->
+        </div>
+    </div>
+    <div class="footer">
+                <div>
+                    <img src="img/footer-logo.png" width="96px" alt="">
+                </div>
+                <div>
+                    <a href="javascript:;" class="myfont">联系我们</a>|
+                    <a href="javascript:;" class="myfont">订购帮助</a>|
+                    <a href="javascript:;" class="myfont">企业合作</a>|
+                    <a href="javascript:;" class="myfont">生产经营资质</a>|
+                    <a href="javascript:;" class="myfont">公告专区</a>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/footericon-01.png" width="60%" alt="">
+                    </div>
+                    <div class="erweima">
+                        <img src="img/footericon-02.png" alt="" width="60%">
+                        <div><img src="img/footer-erweima (1).png" width="100px alt=""></div>
+                    </div>
+                    <div class="erweima1">APP
+                        <div><img src="img/footer-erweima (1).png" width="100px" alt=""></div>
+                    </div>
+                </div>
+                <div>
+                    <p>订购专线：400 650 2121（服务时间 08:00–22:00）</p>
+                    <p>客服电话：021-23099721（全国） | kefu@21cake.com（邮箱）</p>
+                    <p>杭州/广州：提前5小时预订；北京：提前6小时预订；上海：提前5.5-6小时预订；天津/苏州/无锡/深圳：提前8小时预订（部分偏远地区除外，当日22点以后订单，于次日8点开始审核） </p>
+                    <p>当日蛋糕配送截止下单时间：北京：16:50；上海：16:30；杭州/广州：13:50；天津：10:30；苏州/无锡/深圳：11:00</p>
+                    <p>网站注册公司名称: 北京廿一客食品有限公司 地址: 北京市北京经济技术开发区兴海二街5号院3号楼 </p>
+                    <hr>
+                    <p>Copyright© 21Cake蛋糕官网商城 2007-2018, 版权所有 </p>
+                </div> 
+    </div> 
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+    var uid=sessionStorage.getItem("id");
+    $.ajax({
+        url:"http://127.0.0.1:3000/content/username",
+        type:"get",
+        data:{
+            uid
+        },
+        dataType:"json",
+        success:function(result){
+            $("#login").attr("href","javascript:;").html(`欢迎,${result[0].uname}`).next().remove();
+        }
+    })
+    var url=document.URL;
+    id=url.split("=")[1];
+    $.ajax({
+        url:"http://127.0.0.1:3000/content/txt_details?",
+        type:"get",
+        data:{id},
+        dataType:"json",
+        success:function(result){
+            var html="";
+            for(var res of result){
+                html+=`<div>
+                            <h3 class="mycolor">${res.txt_title}</h3>
+                            <span class="myfont">发布时间:${res.pTimer}</span>
+                            <hr>
+                        </div>
+                        <div class="tupian row">
+                            <img src="${res.pic1}" alt="">
+                            <img src="${res.pic2}" alt="">
+                            <img src="${res.pic3}" alt="">
+                            <img src="${res.pic4}" alt="">
+                            <img src="${res.pic5}" alt="">
+                            <img src="${res.pic6}" alt="">
+                            <img src="${res.pic7}" alt="">
+                        </div>`
+            }
+            $(".container").html(html)
+        }
+    })
+    </script>
+</body>
+</html>

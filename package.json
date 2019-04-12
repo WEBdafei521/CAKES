@@ -1,0 +1,32 @@
+{
+  "name": "cakes",
+  "version": "1.0.0",
+  "description": "LP",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "init": "^0.1.2",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WEBdafei521/CAKES.git"
+  },
+  "keywords": [
+    "app.js"
+  ],
+  "author": "lipeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WEBdafei521/CAKES/issues"
+  },
+  "homepage": "https://github.com/WEBdafei521/CAKES#readme"
+}
